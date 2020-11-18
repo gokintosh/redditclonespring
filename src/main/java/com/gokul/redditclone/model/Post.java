@@ -1,13 +1,21 @@
 package com.gokul.redditclone.model;
 
 import com.sun.istack.Nullable;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.apache.logging.log4j.CloseableThreadContext;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.time.Instant;
 
-
+@Data
+@Entity
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
